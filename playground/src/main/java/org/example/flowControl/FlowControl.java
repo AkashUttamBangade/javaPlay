@@ -3,12 +3,14 @@ package org.example.flowControl;
 import java.util.Scanner;
 
 public class FlowControl {
+    public enum Days { Sun, Mon, Tue, Wed, Thu, Fri, Sat }
     public static void main(String[] args) {
 
       //  uitlity();
        // uitlity1();
      //   leapYear();
         calculator(5, 7, 'a');
+        enumExample();
     }
 
     private static void calculator(int a, int b, char operator) {
@@ -99,6 +101,24 @@ public class FlowControl {
             System.out.print("Friend");
         }else{
             System.out.print("You");
+        }
+    }
+
+    public  static void enumExample(){
+
+        Days[] days = Days.values();
+        for(Days days1 : days){
+
+            switch (days1){
+                case Sun:
+                    System.out.println("Sunday");
+                    break;
+                case Mon:
+                    System.out.println("Monday");
+                    break;
+                default:
+                    System.out.println("Monday1111");
+            }
         }
     }
 }
